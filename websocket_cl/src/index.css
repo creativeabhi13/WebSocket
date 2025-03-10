@@ -1,11 +1,37 @@
 .container {
-  text-align: center;
-  background: white;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 100vh;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.canvas {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.btn {
+  padding: 12px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.start {
+  background: #34C759;
+}
+.stop {
+  background: #FF3B30;
 }
 
 .gradient-bar {
@@ -13,40 +39,18 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 50px;
-  background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  height: 15vh;
 }
 
-.gradient-bar.animated {
-  opacity: 1;
+.slow-gradient {
+  animation: slowMotionGradient 5s infinite alternate ease-in-out;
 }
 
-.canvas {
-  border: 1px solid black;
-  margin-top: 60px;
-}
-
-.btn {
-  padding: 10px 20px;
-  font-size: 16px;
-  margin: 10px;
-  border: none;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.start {
-  background: green;
-  color: white;
-}
-
-.stop {
-  background: red;
-  color: white;
-}
-
-.btn:hover {
-  opacity: 0.8;
+@keyframes slowMotionGradient {
+  0% { background: #FF3B30; }
+  20% { background: #FF9500; }
+  40% { background: #FFCC00; }
+  60% { background: #34C759; }
+  80% { background: #007AFF; }
+  100% { background: #5856D6; }
 }

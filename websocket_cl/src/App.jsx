@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useState, useRef } from "react";
 
 
@@ -46,7 +44,7 @@ const WebSocketAnimation = () => {
 
     return (
         <div className="container">
-            {showGradient && <div className="gradient-bar animated" />} 
+            {showGradient && <div className="gradient-bar slow-gradient" />} 
             <canvas ref={canvasRef} width={400} height={400} className="canvas" />
             <br />
             <button onClick={startAnimation} className="btn start">Start</button>
