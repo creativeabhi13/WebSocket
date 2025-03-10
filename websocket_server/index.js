@@ -18,7 +18,7 @@ wss.on("connection", (ws) => {
         const { action } = JSON.parse(message);
 
         if (action === "start") {
-            clearInterval(animationInterval); // Ensure no duplicate intervals
+            clearInterval(animationInterval);
             animationInterval = setInterval(() => {
                 const animationData = {
                     x: Math.random() * 400,
@@ -29,7 +29,6 @@ wss.on("connection", (ws) => {
         } else if (action === "stop") {
             clearInterval(animationInterval);
             animationInterval = null;
-            ws.send(JSON.stringify({ stop: true })); // Send stop signal
         }
     });
 
