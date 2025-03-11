@@ -1,11 +1,11 @@
 {
   "name": "websocket_server",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server",
   "type": "module",
   "scripts": {
-    "serve": "node index.js",
-    "dev": "npx nodemon index.js",
+    "serve": "node server.js",
+    "dev": "npx nodemon server.js",
     "build": "npm install"
   },
   "keywords": [],
