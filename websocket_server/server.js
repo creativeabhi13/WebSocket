@@ -13,7 +13,7 @@ const wss=new WebSocketServer({server});
 
 wss.on('connection',(ws)=>{
     ws.on("message",data=>{
-        console.log("data from clinet:",data);
+        console.log("data from clinet: %s:",data);
         ws.send("Thank you ");
     })
 
